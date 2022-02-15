@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>안녕</h1>
+
+    <div class="alert-box" id="alert">
+        <p id="word">아이디 입력해주세요</p>
+        <button id="close">X</button>
+    </div>
+    <button onclick="Alert('block','type1')">버튼1</button>
+    <button onclick="Alert('block','type2');">버튼2</button>
+    <script>
+
+        document.getElementById('close').addEventListener('click',()=>{
+            document.getElementById('alert').style.display='none';
+        });
+
+        function Alert(now,type){  
+            document.getElementById('alert').style.display=now;
+            if(type==='type1'){
+                document.getElementById('word').innerHTML="아이디를 입력해주세요"; 
+            }else{
+                document.getElementById('word').innerHTML="비밀번호를 입력해주세요";
+            } 
+           
+        }
+        document.getElementById('hello').style.fontSize='30px';
+        
+    </script>
 </body>
 </html>
