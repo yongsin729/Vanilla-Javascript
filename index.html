@@ -9,15 +9,33 @@
 </head>
 <body>
 
+
+    <h4 id="test">안녕하세요</h4>
+
+
     <div class="alert-box" id="alert">
         <p id="word">아이디 입력해주세요</p>
         <button id="close">X</button>
     </div>
     <button onclick="Alert('block','type1')">버튼1</button>
     <button onclick="Alert('block','type2');">버튼2</button>
-    <script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    
 
-        document.getElementById('close').addEventListener('click',()=>{
+    </script>
+        <script>
+            
+     $('#test').html('안녕');
+
+
+
+
+
+
+
+
+     document.getElementById('close').addEventListener('click',()=>{
             document.getElementById('alert').style.display='none';
         });
 
@@ -32,6 +50,19 @@
         }
         document.getElementById('hello').style.fontSize='30px';
         
-    </script>
+        
+        </script>
+        
+
+
+
+
+
+
+
+
+
+
+      
 </body>
 </html>
