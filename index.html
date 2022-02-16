@@ -8,7 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
 
     <h4 id="test">안녕하세요</h4>
 
@@ -17,7 +19,7 @@
         <p id="word">아이디 입력해주세요</p>
         <button id="close">X</button>
     </div>
-    <button onclick="Alert('block','type1')">버튼1</button>
+    <button class="btn" onclick="Alert('block','type1')">버튼1</button>
     <button onclick="Alert('block','type2');">버튼2</button>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
@@ -26,10 +28,12 @@
     </script>
         <script>
             
-     $('#test').html('안녕');
-    $('#test').addClass('yellow-bg')
-
-
+    $('#test').html('안녕');
+    //$('#test').addClass('yellow-bg')
+    $('.greeting').eq(1).html('안녕') 
+    $('.btn').on('click',function(){
+        $('.greeting').hide(); 
+    })
 
 
 
