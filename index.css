@@ -55,3 +55,11 @@
   .nav-sub{
     display: none;
   }
+  #email-alert{
+    color: red;
+    display: none;
+  }
+  #psw-alert{
+    color: red;
+    display: none;
+  }
