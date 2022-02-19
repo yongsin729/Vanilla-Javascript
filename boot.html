@@ -10,13 +10,13 @@
     <link href="index.css" rel="stylesheet" >
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     
-
+      
     </script>
     <title>Hello, world!</title>
   </head>
   <body>
 
-
+    
     <div class="black-background">
       <div class="white-background">
         <p>로그인하세요</p>
@@ -46,10 +46,10 @@
       <li class="list-group-item">InnerWear</li>
       <li class="list-group-item">Shirts</li>
     </ul>
-
+    <span class="badge bg-dark">Dark 🔄</span>
     <div class='bg'>
         <div class='bg-font'>
-      <h1>20% Sale</h1>
+      <h1 >20% Sale</h1>
           <p>Okay yes, it’s a little chilly. And sure, we’d all love to just wrap ourselves in our comforters and call it a day. But just because the weather’s turning, doesn’t mean your style has to go into hibernation too. Behold, the cutest, coziest, and cuddliest cold-weather pieces to keep you wrapped up in style and warmth (without resorting to wearing your bedspread).
           
       </p>
@@ -59,7 +59,17 @@
 
 
       <script>
+        let cnt=0;
+        let darkOn=true;
 
+        $('.badge').on('click',function(){
+          if(cnt%2==0){
+            $('.bg').css('color','black');
+          }else{
+            $('.bg').css('color','white');
+          }
+          cnt++;
+        })
         
         $('form').on('submit',function(e){
           if($('#email').val()==""){
