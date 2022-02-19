@@ -14,7 +14,7 @@
     </script>
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="dark">
 
     
     <div class="black-background">
@@ -65,8 +65,10 @@
         $('.badge').on('click',function(){
           if(cnt%2==0){
             $('.bg').css('color','black');
+            $('.badge').html('light 🔄')
           }else{
             $('.bg').css('color','white');
+            $('.badge').html('Dark 🔄')
           }
           cnt++;
         })
