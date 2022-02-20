@@ -47,6 +47,11 @@
       <li class="list-group-item">Shirts</li>
     </ul>
     <span class="badge bg-dark">Dark 🔄</span>
+
+    <div class="alert alert-danger">
+        <p><span class="alert-cnt">5</span>초 이내 구매시 사은품 증정! </p>
+    </div>
+
     <div class='bg'>
         <div class='bg-font'>
       <h1 >20% Sale</h1>
@@ -61,6 +66,22 @@
       <script>
         let cnt=0;
         let darkOn=true;
+        let time=5;
+        setInterval(function(){
+          
+          if(time<=1){
+            $('.alert').hide();
+          }else{
+            time--;
+            $('.alert-cnt').html(time);
+          }
+        },1000)
+
+        // setTimeout(function(){
+        //   $('.alert').hide();
+        // },1000);//1000ms 후 실행
+
+      // setInterval // ~초 마다 반복 실행하기
 
         $('.badge').on('click',function(){
           if(cnt%2==0){
