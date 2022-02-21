@@ -67,6 +67,10 @@
         let cnt=0;
         let darkOn=true;
         let time=5;
+        
+
+        // [ㄱ-ㅎ가-힣]//한국어 정규식 [a-zA-Z] 영어정규식 [0-9]  , 단 // 안에 괄호 넣고 판단. / var /.test() 
+        //이메일은 
         setInterval(function(){
           
           if(time<=1){
@@ -95,6 +99,10 @@
         })
         
         $('form').on('submit',function(e){
+          if(/\S+@\S+.\S+/.test($('#email').val())){
+            e.preventDefault();
+            $('#email-alert').show();
+          }//Email regex test
           if($('#email').val()==""){
             e.preventDefault();
             $('#email-alert').show();
