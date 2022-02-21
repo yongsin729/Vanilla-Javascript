@@ -62,7 +62,25 @@
           </div>
       </div>
 
-
+      <h4 class="my-4 text-center">ShowCase</h4>
+      <div>
+        <div>
+          <img>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img>
+        </div>
+      </div>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
       <script>
         let cnt=0;
         let darkOn=true;
@@ -99,10 +117,14 @@
         })
         
         $('form').on('submit',function(e){
-          if(/\S+@\S+.\S+/.test($('#email').val())){
+          if(/\S+@\S+.\S+/.test($('#email').val()==false)){
             e.preventDefault();
             $('#email-alert').show();
           }//Email regex test
+          if(/[A-Z]/.test($('#psw').val()==false)){
+            e.preventDefault();
+            $('#psw-alert').show();// show password alert
+          }//password regex
           if($('#email').val()==""){
             e.preventDefault();
             $('#email-alert').show();
