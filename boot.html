@@ -63,30 +63,63 @@
       </div>
 
       <h4 class="my-4 text-center">ShowCase</h4>
-      <div>
-        <div>
-          <img>
+      <div style="overflow: hidden; position: relative;">
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="shirts1.jpg">
+        </div>
+      
+      
+        <div class="slide-box">
+          <img src="shirts2.jfif">
+        </div>
+       
+      
+        <div class="slide-box">
+          <img src="shirts3.jpg">
         </div>
       </div>
-      <div>
-        <div>
-          <img>
-        </div>
-      </div>
-      <div>
-        <div>
-          <img>
-        </div>
-      </div>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
+      <button class="slide-next">Next</button>
+    </div>
+      <button class="slide-1">1</button>
+      <button class="slide-2">2</button>
+      <button class="slide-3">3</button>
+
+      <div class="my-5"></div>
+
       <script>
         let cnt=0;
         let darkOn=true;
         let time=5;
-        
+        let now=1;
 
+        $('.slide-next').click(function(){
+          
+          if(now==1){
+            $('.slide-container').css( "transform", "translateX(-100vw)");
+            now=2;  
+          }else if(now==2){
+            $('.slide-container').css( "transform", "translateX(-200vw)");
+            now=3;
+          }else{
+            $('.slide-container').css( "transform", "translateX(0vw)");
+            now=1;
+          }
+          console.log(now);
+        })
+        
+        $('.slide-1').click(function(){
+          $('.slide-container').css( "transform", "translateX(0vw)");
+
+        })
+        $('.slide-2').click(function(){
+          $('.slide-container').css( "transform", "translateX(-100vw)");
+
+        })
+        $('.slide-3').click(function(){
+          $('.slide-container').css( "transform", "translateX(-200vw)");
+
+        })
         // [ㄱ-ㅎ가-힣]//한국어 정규식 [a-zA-Z] 영어정규식 [0-9]  , 단 // 안에 괄호 넣고 판단. / var /.test() 
         //이메일은 
         setInterval(function(){

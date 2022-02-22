@@ -67,3 +67,25 @@
     text-align: center;
     margin-bottom: 0;
   }
+  .slide-container{
+    width: 300vw;
+    transition: transform 1s;
+    
+  }
+  .slide-box{
+    width:100vw;
+    float: left;
+  }
+  .slide-box img{
+    
+    width: 30%;
+  }
+  .slide-next{
+    position: absolute;
+    top:45%;
+    left:460px;
+  }
+
+  /* .slide-next::hover{
+    display: block;
+  } */
