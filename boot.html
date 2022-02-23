@@ -79,6 +79,7 @@
           <img src="shirts3.jpg">
         </div>
       </div>
+      <button class="slide-before">Before</button>
       <button class="slide-next">Next</button>
     </div>
       <button class="slide-1">1</button>
@@ -95,19 +96,28 @@
 
         $('.slide-next').click(function(){
           
-          if(now==1){
-            $('.slide-container').css( "transform", "translateX(-100vw)");
-            now=2;  
-          }else if(now==2){
-            $('.slide-container').css( "transform", "translateX(-200vw)");
-            now=3;
-          }else{
-            $('.slide-container').css( "transform", "translateX(0vw)");
-            now=1;
+          if(now<3){
+            $('.slide-container').css( "transform", "translateX(-"+now*1+"00vw)");
+            now++;
           }
-          console.log(now);
         })
-        
+        $('.slide-before').click(function(){
+          
+          if(now>1){
+            $('.slide-container').css( "transform", "translateX(-"+(now-2)+"00vw)");
+            now--;  
+          }
+          // if(now==1){
+          //   $('.slide-container').css( "transform", "translateX(-200vw)");
+          //   now=3;  
+          // }else if(now==3){
+          //   $('.slide-container').css( "transform", "translateX(-100vw)");
+          //   now=2;
+          // }else{
+          //   $('.slide-container').css( "transform", "translateX(0vw)");
+          //   now=1;
+          // }
+        })
         $('.slide-1').click(function(){
           $('.slide-container').css( "transform", "translateX(0vw)");
 

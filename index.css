@@ -85,7 +85,11 @@
     top:45%;
     left:460px;
   }
-
+.slide-before{
+  position: absolute;
+  top:45%;
+  left:0;
+}
   /* .slide-next::hover{
     display: block;
   } */
