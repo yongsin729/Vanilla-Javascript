@@ -80,6 +80,17 @@
     
     width: 30%;
   }
+  .slide-text{
+    width: 70%;
+    float: right;
+    padding-left: 40px;
+  }
+  .main-slide button{
+    border-radius: 5px;
+    color: blueviolet;
+    background-color: white;
+    border:solid 1px white;
+  }
   .slide-next{
     position: absolute;
     top:45%;
@@ -93,3 +104,5 @@
   /* .slide-next::hover{
     display: block;
   } */
+  
+  

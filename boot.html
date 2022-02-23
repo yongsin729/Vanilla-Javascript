@@ -1,202 +1,226 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="index.css" rel="stylesheet" >
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-    
-      
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="index.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+
+
     </script>
-    <title>Hello, world!</title>
-  </head>
-  <body class="dark">
+  <title>Hello, world!</title>
+</head>
 
-    
-    <div class="black-background">
-      <div class="white-background">
-        <p>로그인하세요</p>
-        <form action="login.php">
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" id="email">
-            <p id="email-alert">이메일이 빈칸입니다</p>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" id="psw">
-            <p id="psw-alert">패스워드 오류입니다 </p>
-          </div>
-          <button type="submit" class="btn btn-primary">전송</button>
-          
+<body class="dark">
+
+
+  <div class="black-background">
+    <div class="white-background">
+      <p>로그인하세요</p>
+      <form action="login.php">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email" id="email">
+          <p id="email-alert">이메일이 빈칸입니다</p>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" id="psw">
+          <p id="psw-alert">패스워드 오류입니다 </p>
+        </div>
+        <button type="submit" class="btn btn-primary">전송</button>
+
         <button class="btn btn-danger close-modal">닫기</button>
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
-    <div class="nav-menu">
-      <h4 style="margin: 0;">Studio</h4>
-      <p id="nav-sub-button">Products</p>
-    </div>
+  <div class="nav-menu">
+    <h4 style="margin: 0;">Studio</h4>
+    <p id="nav-sub-button">Products</p>
+  </div>
 
-    <ul class="list-group nav-sub">
-      <li class="list-group-item">Outer</li>
-      <li class="list-group-item">InnerWear</li>
-      <li class="list-group-item">Shirts</li>
-    </ul>
-    <span class="badge bg-dark">Dark 🔄</span>
+  <ul class="list-group nav-sub">
+    <li class="list-group-item">Outer</li>
+    <li class="list-group-item">InnerWear</li>
+    <li class="list-group-item">Shirts</li>
+  </ul>
+  <span class="badge bg-dark">Dark 🔄</span>
 
-    <div class="alert alert-danger">
-        <p><span class="alert-cnt">5</span>초 이내 구매시 사은품 증정! </p>
-    </div>
+  <div class="alert alert-danger">
+    <p><span class="alert-cnt">5</span>초 이내 구매시 사은품 증정! </p>
+  </div>
 
-    <div class='bg'>
-        <div class='bg-font'>
-      <h1 >20% Sale</h1>
-          <p>Okay yes, it’s a little chilly. And sure, we’d all love to just wrap ourselves in our comforters and call it a day. But just because the weather’s turning, doesn’t mean your style has to go into hibernation too. Behold, the cutest, coziest, and cuddliest cold-weather pieces to keep you wrapped up in style and warmth (without resorting to wearing your bedspread).
-          
+  <div class='bg'>
+    <div class='bg-font'>
+      <h1>20% Sale</h1>
+      <p>Okay yes, it’s a little chilly. And sure, we’d all love to just wrap ourselves in our comforters and call it a
+        day. But just because the weather’s turning, doesn’t mean your style has to go into hibernation too. Behold, the
+        cutest, coziest, and cuddliest cold-weather pieces to keep you wrapped up in style and warmth (without resorting
+        to wearing your bedspread).
+
       </p>
       <Button class='btn btn-primary' id="login">Login</Button>
-          </div>
-      </div>
-
-      <h4 class="my-4 text-center">ShowCase</h4>
-      <div style="overflow: hidden; position: relative;">
-      <div class="slide-container">
-        <div class="slide-box">
-          <img src="shirts1.jpg">
-        </div>
-      
-      
-        <div class="slide-box">
-          <img src="shirts2.jfif">
-        </div>
-       
-      
-        <div class="slide-box">
-          <img src="shirts3.jpg">
-        </div>
-      </div>
-      <button class="slide-before">Before</button>
-      <button class="slide-next">Next</button>
     </div>
-      <button class="slide-1">1</button>
-      <button class="slide-2">2</button>
-      <button class="slide-3">3</button>
+  </div>
 
-      <div class="my-5"></div>
+  <h4 class="my-4 text-center">ShowCase</h4>
+  <div class="main-slide" style="overflow: hidden; position: relative;">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="shirts1.jpg">
+        <div class="slide-text">
+          <h4>Title</h4>
+          <p>informaition of shirts</p>
+        </div>
+      </div>
 
-      <script>
-        let cnt=0;
-        let darkOn=true;
-        let time=5;
-        let now=1;
 
-        $('.slide-next').click(function(){
-          
-          if(now<3){
-            $('.slide-container').css( "transform", "translateX(-"+now*1+"00vw)");
-            now++;
-          }
-        })
-        $('.slide-before').click(function(){
-          
-          if(now>1){
-            $('.slide-container').css( "transform", "translateX(-"+(now-2)+"00vw)");
-            now--;  
-          }
-          // if(now==1){
-          //   $('.slide-container').css( "transform", "translateX(-200vw)");
-          //   now=3;  
-          // }else if(now==3){
-          //   $('.slide-container').css( "transform", "translateX(-100vw)");
-          //   now=2;
-          // }else{
-          //   $('.slide-container').css( "transform", "translateX(0vw)");
-          //   now=1;
-          // }
-        })
-        $('.slide-1').click(function(){
-          $('.slide-container').css( "transform", "translateX(0vw)");
+      <div class="slide-box">
+        <img src="shirts2.jfif">
+        <div class="slide-text">
+          <h4>제목</h4>
+          <p>내용</p>
+        </div>
+      </div>
 
-        })
-        $('.slide-2').click(function(){
-          $('.slide-container').css( "transform", "translateX(-100vw)");
 
-        })
-        $('.slide-3').click(function(){
-          $('.slide-container').css( "transform", "translateX(-200vw)");
+      <div class="slide-box">
+        <img src="shirts3.jpg">
+        <div class="slide-text">
+          <h4>제목</h4>
+          <p>내용</p>
+        </div>
+      </div>
+    </div>
+    <button class="slide-before ">Before</button>
+    <button class="slide-next ">Next</button>
+  </div>
 
-        })
-        // [ㄱ-ㅎ가-힣]//한국어 정규식 [a-zA-Z] 영어정규식 [0-9]  , 단 // 안에 괄호 넣고 판단. / var /.test() 
-        //이메일은 
-        setInterval(function(){
-          
-          if(time<=1){
-            $('.alert').hide();
-          }else{
-            time--;
-            $('.alert-cnt').html(time);
-          }
-        },1000)
+<!-- 
+  <button class="slide-1">1</button>
+  <button class="slide-2">2</button>
+  <button class="slide-3">3</button> -->
 
-        // setTimeout(function(){
-        //   $('.alert').hide();
-        // },1000);//1000ms 후 실행
+  <div class="my-5"></div>
 
-      // setInterval // ~초 마다 반복 실행하기
+  <script>
+    let cnt = 0;
+    let darkOn = true;
+    let time = 5;
+    let now = 1;
 
-        $('.badge').on('click',function(){
-          if(cnt%2==0){
-            $('.bg').css('color','black');
-            $('.badge').html('light 🔄')
-          }else{
-            $('.bg').css('color','white');
-            $('.badge').html('Dark 🔄')
-          }
-          cnt++;
-        })
-        
-        $('form').on('submit',function(e){
-          if(/\S+@\S+.\S+/.test($('#email').val()==false)){
-            e.preventDefault();
-            $('#email-alert').show();
-          }//Email regex test
-          if(/[A-Z]/.test($('#psw').val()==false)){
-            e.preventDefault();
-            $('#psw-alert').show();// show password alert
-          }//password regex
-          if($('#email').val()==""){
-            e.preventDefault();
-            $('#email-alert').show();
-            }else if($('#psw').val()==''){
-            e.preventDefault();
-            $('#psw-alert').show();
-          }
-        })
+    $('.slide-next').click(function () {
 
-        $('.close-modal').on('click',function(){
-          $('.black-background').hide();
-        });
-        $('#login').on('click',function(){
-          $('.black-background').fadeIn();
-        }
-        );
-        $('#nav-sub-button').click(function(){
-          $('.nav-sub').slideToggle();//slide up down 
-        });
-      </script>
-    <!-- Optional JavaScript; choose one of the two! -->
+      if (now < 3) {
+        $('.slide-container').css("transform", "translateX(-" + now * 1 + "00vw)");
+        now++;
+      }
+    })
+    $('.slide-before').click(function () {
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      if (now > 1) {
+        $('.slide-container').css("transform", "translateX(-" + (now - 2) + "00vw)");
+        now--;
+      }
+      // if(now==1){
+      //   $('.slide-container').css( "transform", "translateX(-200vw)");
+      //   now=3;  
+      // }else if(now==3){
+      //   $('.slide-container').css( "transform", "translateX(-100vw)");
+      //   now=2;
+      // }else{
+      //   $('.slide-container').css( "transform", "translateX(0vw)");
+      //   now=1;
+      // }
+    })
+    $('.slide-1').click(function () {
+      $('.slide-container').css("transform", "translateX(0vw)");
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+    })
+    $('.slide-2').click(function () {
+      $('.slide-container').css("transform", "translateX(-100vw)");
+
+    })
+    $('.slide-3').click(function () {
+      $('.slide-container').css("transform", "translateX(-200vw)");
+
+    })
+    // [ㄱ-ㅎ가-힣]//한국어 정규식 [a-zA-Z] 영어정규식 [0-9]  , 단 // 안에 괄호 넣고 판단. / var /.test() 
+    //이메일은 
+    setInterval(function () {
+
+      if (time <= 1) {
+        $('.alert').hide();
+      } else {
+        time--;
+        $('.alert-cnt').html(time);
+      }
+    }, 1000)
+
+    // setTimeout(function(){
+    //   $('.alert').hide();
+    // },1000);//1000ms 후 실행
+
+    // setInterval // ~초 마다 반복 실행하기
+
+    $('.badge').on('click', function () {
+      if (cnt % 2 == 0) {
+        $('.bg').css('color', 'black');
+        $('.badge').html('light 🔄')
+      } else {
+        $('.bg').css('color', 'white');
+        $('.badge').html('Dark 🔄')
+      }
+      cnt++;
+    })
+
+    $('form').on('submit', function (e) {
+      if (/\S+@\S+.\S+/.test($('#email').val() == false)) {
+        e.preventDefault();
+        $('#email-alert').show();
+      }//Email regex test
+      if (/[A-Z]/.test($('#psw').val() == false)) {
+        e.preventDefault();
+        $('#psw-alert').show();// show password alert
+      }//password regex
+      if ($('#email').val() == "") {
+        e.preventDefault();
+        $('#email-alert').show();
+      } else if ($('#psw').val() == '') {
+        e.preventDefault();
+        $('#psw-alert').show();
+      }
+    })
+
+    $('.close-modal').on('click', function () {
+      $('.black-background').hide();
+    });
+    $('#login').on('click', function () {
+      $('.black-background').fadeIn();
+    }
+    );
+    $('#nav-sub-button').click(function () {
+      $('.nav-sub').slideToggle();//slide up down 
+    });
+  </script>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>
