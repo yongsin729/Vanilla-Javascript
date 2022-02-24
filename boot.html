@@ -50,7 +50,10 @@
     <li class="list-group-item">InnerWear</li>
     <li class="list-group-item">Shirts</li>
   </ul>
-  <span class="badge bg-dark">Dark 🔄</span>
+
+<!-- 
+  <span class="badge bg-dark">Dark 🔄</span> -->
+  
 
   <div class="alert alert-danger">
     <p><span class="alert-cnt">5</span>초 이내 구매시 사은품 증정! </p>
@@ -114,6 +117,11 @@
     let darkOn = true;
     let time = 5;
     let now = 1;
+
+    $(window).on('scroll',function(){
+      console.log('안녕')
+    })//viewport 
+
 
     $('.slide-next').click(function () {
 
