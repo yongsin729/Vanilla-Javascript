@@ -41,8 +41,8 @@
   </div>
 
   <div class="nav-menu">
-    <h4 style="margin: 0;">Studio</h4>
-    <p id="nav-sub-button">Products</p>
+    <p style="margin: 0;">Studio</p>
+    <p id="nav-sub-button" style="margin: 0;">Products</p>
   </div>
 
   <ul class="list-group nav-sub">
@@ -121,6 +121,8 @@
     $(window).on('scroll',function(){
       if($(window).scrollTop()>100){
         $('.nav-menu').addClass('nav-black');
+      }else{
+        $('.nav-menu').removeClass('nav-black');
       }
       
     })//viewport 
