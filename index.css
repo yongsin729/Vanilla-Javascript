@@ -57,6 +57,10 @@
     width: 100%;
     color: white;
   }
+  .nav-black{
+    background: white;
+    color: black;
+  }
   .nav-sub{
     display: none;
   }
