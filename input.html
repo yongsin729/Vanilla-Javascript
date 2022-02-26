@@ -35,7 +35,7 @@
     </div>
   </form>
   <script>
-
+    var size=[26,28,30,32,34,36]
     $('#option1').on('change',function(){
       if($('#option1').val()=='셔츠'){
         $('#option2').html('');
@@ -46,16 +46,43 @@
         $('.size-select').show();
       }else if($('#option1').val()=='바지'){
         $('#option2').html('');
-        let 템플릿=`<option>28</option>
-          <option>30</option>
-          <option>32</option>`;
-        $('#option2').append(템플릿);
+        
+        size.forEach(function(i){
+          var 템플릿=`<option>${i}</option>`;
+          $('#option2').append(템플릿);
+        });// var.forEach
+        // for(var i=0;i<size.length;i++){
+        //   var 템플릿=`<option>${size[i]}</option>`;
+        //   $('#option2').append(템플릿);
+        // }
+        
         $('.size-select').show();
       }else{
         $('.size-select').hide();
       }
       
     })
+    // var 출석부=['흥민','영희','철수','재석'];
+    // function 이름찾기(이름){
+    //   for(let i=0;i<출석부.length;i++){
+    //     if(출석부[i]==이름){   
+    //     console.log('있어요');
+    //     break;
+    //     }
+    // }
+    // }
+    // 이름찾기('철수');
+    function 목표량계산기(판매실적,판매량){
+      let cnt=0;
+      for(let i=0;i<판매실적.length;i++){
+        cnt+=판매실적[i];
+      }
+      cnt/=판매실적.length;
+      목표=판매량-cnt;
+      console.log((판매실적.length+1)*목표);
+      console.log(1);
+    }
+    목표량계산기([10,20,30,40,50],35);
   </script>
   <!-- Optional JavaScript; choose one of the two! -->
 
