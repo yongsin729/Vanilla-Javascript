@@ -15,8 +15,15 @@
 
 <body>
 
-  <h4 id="hello">임시글씨</h4>
-  <button class="btn btn-danger"id="button1">버튼</button>
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <button class="btn btn-danger"id="button1" style="margin-top: 10px;">상품 보여주기 </button>
   <form class="container my-5">
     <div class="form-group">
 
@@ -41,11 +48,13 @@
 
 $('#button1').click(function(){
   $.ajax({ 
-    url : 'https://codingapple1.github.io/hello.txt',
+    url : 'https://codingapple1.github.io/data.json',
     type : 'GET'
 }).done(function(data){
-  $('#hello').html(data);
- // console.log(data)//done 은 성공시 ~ 실행해주세요
+  $('.card-title').html(data.model);
+  $('.card-text').html(data.price);
+  $('.card-img-top').attr('src',data.img);
+  //console.log(data)//done 은 성공시 ~ 실행해주세요
 })
 });
 
