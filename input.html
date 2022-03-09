@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+  <h4 id="hello">임시글씨</h4>
+  <button class="btn btn-danger"id="button1">버튼</button>
   <form class="container my-5">
     <div class="form-group">
 
@@ -34,6 +37,19 @@
 
     </div>
   </form>
+  <script>
+
+$('#button1').click(function(){
+  $.ajax({ 
+    url : 'https://codingapple1.github.io/hello.txt',
+    type : 'GET'
+}).done(function(data){
+  $('#hello').html(data);
+ // console.log(data)//done 은 성공시 ~ 실행해주세요
+})
+});
+
+  </script>
   <script>
     var size=[26,28,30,32,34,36]
     $('#option1').on('change',function(){
